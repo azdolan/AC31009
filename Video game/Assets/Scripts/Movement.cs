@@ -7,11 +7,18 @@ public class Movement : MonoBehaviour
     public Animator animator;
 
 
-    // Update is called once per frame
+    /** 
+     * Void Update() allows the main character to move 
+     */
+
     void Update()
     {
-        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        Vector3 horizontal = new Vector3(Input.GetAxis("Horizontal"), 0.0f,0.0f);
-        transform.position = transform.position + horizontal * Time.deltaTime;
+        Vector3 characterMovement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+
+        animator.SetFloat("Horizontal", characterMovement.x);
+        animator.SetFloat("Vertical", characterMovement.y);
+        animator.SetFloat("Magnitude", characterMovement.magnitude);
+        
+        transform.position = transform.position + characterMovement * Time.deltaTime;
     }
 }
