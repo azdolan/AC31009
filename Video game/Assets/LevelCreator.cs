@@ -1,9 +1,9 @@
-
 using UnityEngine;
 
 public class LevelCreator : MonoBehaviour
 {
     public Texture2D levelMap;
+    public ColourToPrefab[] colourMappings;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,13 @@ public class LevelCreator : MonoBehaviour
             return;
         }
 
-        Debug.Log(pixelColor);
+        foreach (ColourToPrefab colourMapping in colourMappings)
+        {
+            if (colourMapping.colour.Equals(pixelColor))
+            {
+                Vector2 poistion = new Vector2(i, j);
+                Instantiate(colourMapping.prefab, poistion, Quaternion.identity, transform);
+            }
+        }
     }
 }
