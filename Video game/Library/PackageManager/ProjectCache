@@ -5,16 +5,26 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637852748270000000
     m_Hash: 2331673264
+=======
+      ticks: 637848347070000000
+    m_Hash: 1047092389
+>>>>>>> level-creator
   m_LockFileStatus:
     m_FilePath: /Users/aidandolan/Desktop/AC31009/Video game/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637852748510000000
     m_Hash: 1051180089
+=======
+      ticks: 637848365450000000
+    m_Hash: 3361891340
+>>>>>>> level-creator
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
