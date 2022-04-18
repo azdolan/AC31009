@@ -1,20 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorAnimation : MonoBehaviour
 {
     public Animator animator;
+    
 
-   
-
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) //if the player presses the E button
-        {
-            openDoor(); //This makes the openDoor function happen
-        }
+        openDoor();
     }
 
     /*
@@ -24,8 +17,13 @@ public class DoorAnimation : MonoBehaviour
 
     public void openDoor()
     {
-        animator.SetTrigger("DoorOpen"); // this makes the door animation play
-        Debug.Log("Door is open"); // for testing purposes to see if the animation plays
+        if (Input.GetKeyDown(KeyCode.E))
+      {
+            animator.SetTrigger("DoorOpen"); // this makes the door animation play
+            Debug.Log("Door is open"); // for testing purposes to see if the animation plays   
+       }
+        
+       
     }
-
+    
 }
