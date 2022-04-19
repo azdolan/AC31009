@@ -152,12 +152,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9aa58fcc9b9940c99bd1147fb9d89c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelMap: {fileID: 2800000, guid: 316ff20c7470e455682d751c29835eaa, type: 3}
+  levelMap: {fileID: 2800000, guid: 2fd65623cbf3740d48adc1180624c46b, type: 3}
   colorMappings:
   - color: {r: 0, g: 0, b: 0, a: 1}
-    prefab: {fileID: 472170052401900767, guid: 13acd15e03bba45dbacccf80601c3b6f, type: 3}
+    prefab: {fileID: 4821505268758360109, guid: 17556f7e4c66243ab80ba37c8f40928e, type: 3}
   - color: {r: 1, g: 0, b: 0, a: 1}
-    prefab: {fileID: 6585025646848988084, guid: 709096981c47347b8ba9aaf8a88373f5, type: 3}
+    prefab: {fileID: 6662534690019147990, guid: 064d56322a3d74462838cbd58dadbfff, type: 3}
+  - color: {r: 0, g: 1, b: 0, a: 1}
+    prefab: {fileID: 8171166107609225483, guid: a521c21c9137e4be295e3bf4e0790eb4, type: 3}
+  - color: {r: 0, g: 0, b: 1, a: 1}
+    prefab: {fileID: 0}
 --- !u!4 &1113529176
 Transform:
   m_ObjectHideFlags: 0
