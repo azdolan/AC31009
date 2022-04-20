@@ -31,13 +31,15 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log("Attack");
 
         Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
+        Debug.Log("Number of enemies in range" + enemiesHit.Length);
         foreach (Collider2D enemy in enemiesHit) // this loops for every item stored in the enemiesHit array
         {
+
             enemy.GetComponent<Enemy>().Damage(attackDamage);
 
 
         }
+    }
 
         void OnDrawGizmosSelected()
         {
@@ -48,6 +50,7 @@ public class PlayerAttack : MonoBehaviour
 
             // this draws a sphere on the editor which makes it easiser for me to visulaise how the player attacks the enemy
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-        }
+
     }
 }
+
