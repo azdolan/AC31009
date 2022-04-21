@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B4349763-8039-7C7F-07E8-15D91A32DFF8}</ProjectGuid>
+    <ProjectGuid>{3F0CD314-F969-3C4A-1CFF-F1AA194A7614}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Animation.Runtime</AssemblyName>
@@ -56,28 +56,28 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/SpriteSkin.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/TransformAccessJob.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/NativeArrayHelper.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/SpriteSkinBatch.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/UpdateBoundsJob.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/AssemblyInfo.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/SpriteSkinManager.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/DeformSpriteSystem.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/SpriteSkinUtility.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/Components.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/SpriteLib/SpriteLibrary.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/NativeCustomSlice.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/SpriteLib/SpriteResolver.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/UpdateBoundsSystem.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/SpriteSkinEntity.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/SpriteLib/SpriteLibraryAsset.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/PrepareSkinningSystem.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/BufferManager.cs" />
-    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/SpriteSkinComposite.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/SpriteSkin.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/TransformAccessJob.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/NativeArrayHelper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/SpriteSkinBatch.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/UpdateBoundsJob.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/AssemblyInfo.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/SpriteSkinManager.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/DeformSpriteSystem.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/SpriteSkinUtility.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/Components.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/SpriteLib/SpriteLibrary.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/NativeCustomSlice.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/SpriteLib/SpriteResolver.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/UpdateBoundsSystem.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/SpriteSkinEntity.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/SpriteLib/SpriteLibraryAsset.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/PrepareSkinningSystem.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/BufferManager.cs" />
+    <Compile Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/SpriteSkinComposite.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library/PackageCache/com.unity.2d.animation@5.1.0/Runtime/Unity.2D.Animation.Runtime.asmdef" />
+    <None Include="Library/PackageCache/com.unity.2d.animation@5.1.1/Runtime/Unity.2D.Animation.Runtime.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -311,17 +311,32 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="GitHub.Logging">
+      <HintPath>Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.15.12/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.15.16/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.15.12/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.15.16/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.15.12/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+    <Reference Include="sfw.net">
+      <HintPath>Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.15.12/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.15.16/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="GitHub.Unity.45">
+      <HintPath>Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+    </Reference>
+    <Reference Include="GitHub.UnityShim">
+      <HintPath>Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
+    </Reference>
+    <Reference Include="GitHub.Api.45">
+      <HintPath>Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@1.15.16/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Users/aidandolan/Desktop/2020.3.30f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -671,23 +686,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{B34E7BCE-86D8-CFB2-F1F9-C8B9824D1545}</Project>
+      <Project>{F46829BB-8F98-9232-EDA4-082BA341E17A}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{3B2CE27F-5004-2D94-7C97-530F6BA225BC}</Project>
+      <Project>{D5BECCEF-0C0B-15E5-EE1A-B429681A63F7}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{2D55108B-1F7A-F9CD-E566-CF2012C4500D}</Project>
+      <Project>{18FA19DF-16A9-5544-7671-6A94DA8FEF25}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{54A8C805-CCA9-52DF-6481-81220F1F0F38}</Project>
+      <Project>{48931B91-C60E-614D-7E0A-7DF704E1DFFC}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{C6DD2B36-581B-15EB-056F-5CF5A33F015C}</Project>
+      <Project>{D624A4C4-6886-1D4F-D788-F467489587FE}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
