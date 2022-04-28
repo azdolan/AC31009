@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public int maxHealth = 100;
     private int currentHealth;
+    public PlayerScore score;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class Enemy : MonoBehaviour
         if(currentHealth <= 0)
         {
             enemyDie();
+            
         }
     }
 
@@ -31,6 +34,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("Enemy died");
         // die animation
         animator.SetBool("IsDead", true);
+        score.player += 10;
 
         // disable enemy
         GetComponent<Collider2D>().enabled = false;

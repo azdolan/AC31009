@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public Animator animator;
     public int maxHealth = 100;
     public int currenthealth;
 
     public Health health;
 
 
-     void Start()
+    void Start()
     {
         currenthealth = maxHealth;
         health.maxHealth(maxHealth);
@@ -25,10 +26,21 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-  void playerDamage(int damage)
+    void playerDie()
+    {
+        Debug.Log("Player died");
+        animator.SetBool("isDead", true);
+    }
+
+ public void playerDamage(int damage)
     {
         currenthealth -= damage;
         health.playerHealth(currenthealth);
+
+        if (currenthealth <= 0)
+        {
+            playerDie();
+        }
     }
 
 }
