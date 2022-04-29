@@ -8,8 +8,8 @@ public class ChestAnimation : MonoBehaviour
     public Transform chestPoint;
     public float chestRange;
     public LayerMask chestLayer;
-    
-
+    public GameObject healthChest;
+    PlayerHealth health;
 
     void Update()
     {
@@ -29,11 +29,14 @@ public class ChestAnimation : MonoBehaviour
         foreach (Collider2D chest in chests) // this loops for every item stored in the enemiesHit array
         {
             animator.SetTrigger("OpenChest"); //plays the chest opening animation
-            chest.GetComponent<playerInventory>().keyFound();
-            Debug.Log("Chest opened"); //prints to the log if triggered for testing
-          
+            healthChest = GameObject.Find("Player");
+            healthChest.GetComponent<PlayerHealth>().increaseHealth(10);
+            //healthChest.GetComponent<playerInventory>().keyFound(1);
+
 
         }
+
+
     }
 
     void OnDrawGizmosSelected()
