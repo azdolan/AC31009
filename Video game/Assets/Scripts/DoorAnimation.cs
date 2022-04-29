@@ -6,6 +6,11 @@ public class DoorAnimation : MonoBehaviour
     public Transform doorPoint;
     public float doorRange;
     public LayerMask doorLayer;
+    public GameObject player;
+
+    public static AudioClip doorOpening;
+    static AudioSource source;
+    
 
     public void Update()
     {
@@ -40,10 +45,18 @@ public class DoorAnimation : MonoBehaviour
 
         foreach (Collider2D door in doors) // this loops for every item stored in the enemiesHit array
         {
-            animator.SetTrigger("DoorOpen"); // this makes the door animation play
-            Debug.Log("Door is open"); // for testing purposes to see if the animation plays
+            player = GameObject.Find("Player");
 
-            
+            if(player.GetComponent<playerInventory>().keyCount == 1)
+            {
+                 animator.SetTrigger("DoorOpen"); // this makes the door animation play
+                 Debug.Log("Door is open"); // for testing purposes to see if the animation plays
+                doorOpening = Resources.Load<AudioClip>("door");
+                source = GetComponent<AudioSource>();
+                source.PlayOneShot(doorOpening);
+
+            }
+
 
         }
 

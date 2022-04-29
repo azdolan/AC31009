@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public Animator animator;
     public int maxHealth = 100;
-    public int currenthealth;
+    public int currenthealth = 50;
 
     public Health health;
 
@@ -43,4 +43,13 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void increaseHealth(int increase)
+    {
+        currenthealth += increase;
+
+        if (currenthealth > maxHealth)
+        {
+            currenthealth = maxHealth;
+        }
+    }
 }
