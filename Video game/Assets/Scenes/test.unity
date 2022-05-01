@@ -318,6 +318,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[13].prefab
+      value: 
+      objectReference: {fileID: 8609755414207968395, guid: 3b9951371ed0447ea9ff386f2813abd6, type: 3}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[14].prefab
+      value: 
+      objectReference: {fileID: 2086595659048012127, guid: be29d08c09145478380339109553be1e, type: 3}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[13].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[13].color.b
+      value: 0.15294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[13].color.g
+      value: 0.4862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[13].color.r
+      value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[14].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[14].color.b
+      value: 0.6431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[14].color.g
+      value: 0.76862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548783893800994366, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
+      propertyPath: colorMappings.Array.data[14].color.r
+      value: 0.76862746
+      objectReference: {fileID: 0}
     - target: {fileID: 8548783893800994367, guid: cc6323c27a57943f19f3556ca5e3d635, type: 3}
       propertyPath: m_Name
       value: LevelGenerator

@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float characterMovement;
+    public float characterMovement = 3f;
     public float rayDistance;
     bool rightDirection = true;
     public Transform endofRoute;
-    public LayerMask groundLayer;
+    public Animator Animator;
 
+    Enemy health;
    void Start()
     {
-        if(this.gameObject.name == "enemy")
-        {
-            Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        }
+        
     }
+
     void Update()
     {
-        moveEnemy();
-       
+        health = this.GetComponent<Enemy>();
+        
+        if (health.GetEnemyHealth() > 0)
+        {
+            moveEnemy();
+        }
     }
 
     
@@ -28,14 +31,18 @@ public class EnemyMovement : MonoBehaviour
     void moveEnemy()
     {
         
-        transform.Translate(Vector2.right * characterMovement * Time.deltaTime);
+        transform.Translate(Vector2.left * characterMovement * Time.deltaTime);
+        //Debug.Log("Moving along: " + characterMovement + " * " + Time.deltaTime);
+
+        transform.Translate(Vector2.left * 3 * Time.deltaTime);
+
 
         RaycastHit2D bottom = Physics2D.Raycast(endofRoute.position, Vector2.down, rayDistance);
 
         //if the Raycast has not collided with anything 
         if (bottom.collider == false)
         {
-            Debug.Log("Collider: " + this.gameObject.name);
+            //Debug.Log("Collider: " + this.gameObject.name);
             //if the character is moving right
             if (rightDirection == true)
             {
@@ -52,16 +59,11 @@ public class EnemyMovement : MonoBehaviour
             }
 
         }
-        /*
-            else
-            {
-                Debug.Log("collider name: " + right.collider.name);
-            }
-        */
-
+        
 
     }
-    
+
+
 }
 
 

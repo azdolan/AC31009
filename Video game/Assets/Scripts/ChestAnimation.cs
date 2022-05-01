@@ -8,9 +8,13 @@ public class ChestAnimation : MonoBehaviour
     public Transform chestPoint;
     public float chestRange;
     public LayerMask chestLayer;
-    
+    public GameObject healthChest;
+    PlayerHealth health;
+    public AudioSource chestOpening;
 
-
+    /*
+     * This function will open the chest when the E key is pressed
+     */
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -18,8 +22,10 @@ public class ChestAnimation : MonoBehaviour
             chestTrigger();
         }
     }
-    
 
+    /*
+     * This function creates the parameters needed to be met before the chest will open
+     */
     public void chestTrigger()
     {
 
@@ -29,11 +35,15 @@ public class ChestAnimation : MonoBehaviour
         foreach (Collider2D chest in chests) // this loops for every item stored in the enemiesHit array
         {
             animator.SetTrigger("OpenChest"); //plays the chest opening animation
-            chest.GetComponent<playerInventory>().keyFound();
-            Debug.Log("Chest opened"); //prints to the log if triggered for testing
-          
-
+            healthChest = GameObject.Find("Player");
+            healthChest.GetComponent<PlayerHealth>().increaseHealth(10);
+            playAudio();
         }
+    }
+
+    public void playAudio()
+    {
+        chestOpening.Play();
     }
 
     void OnDrawGizmosSelected()

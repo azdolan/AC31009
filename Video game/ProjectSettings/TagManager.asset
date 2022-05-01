@@ -18,8 +18,8 @@ TagManager:
   - Chest
   - Ground
   - Tile
-  - 
-  - 
+  - KeyChest
+  - Floor
   - 
   - 
   - 
@@ -43,9 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Tile
-    uniqueID: 251689547
-    locked: 0
   - name: Enemy
     uniqueID: 1237609095
+    locked: 0
+  - name: Tile
+    uniqueID: 251689547
     locked: 0
