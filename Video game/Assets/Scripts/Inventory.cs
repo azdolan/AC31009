@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
+        keyCount = 0;
         keyText = GetComponent<Text>();
         keyText.text = "Keys : " + keyCount; //creates the key text and sets it to 0
     }

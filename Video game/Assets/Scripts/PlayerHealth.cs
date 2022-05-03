@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (currenthealth <= 0 && isAlive)
         {
-            endGameScreen.EnableGameOverMenu();
+            endGameScreen.restartLevel();
             playerDie();
             Debug.Log("Player has died");
         }

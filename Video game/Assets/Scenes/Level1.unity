@@ -1296,6 +1296,18 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 657686106212264241, guid: 50bf12e63128e46278bfdeddf92973c4, type: 3}
+      propertyPath: LevelLoad
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 657686106212264241, guid: 50bf12e63128e46278bfdeddf92973c4, type: 3}
+      propertyPath: levelToLoad
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 657686106212264241, guid: 50bf12e63128e46278bfdeddf92973c4, type: 3}
+      propertyPath: loadLevelWithInt
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50bf12e63128e46278bfdeddf92973c4, type: 3}
 --- !u!1001 &1735015921
@@ -1319,7 +1331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377420359791733940, guid: 875b18ad3b2b34f2291e5fa895fd944f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 111
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 7377420359791733940, guid: 875b18ad3b2b34f2291e5fa895fd944f, type: 3}
       propertyPath: m_LocalPosition.y

@@ -55,4 +55,5 @@ public class EndGameScreen : MonoBehaviour
             Debug.Log("Quitting");
         }
     }
+    
 }
