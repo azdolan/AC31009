@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange;
     public LayerMask enemyLayers;
     public int attackDamage = 40;
+    public AudioSource sword;
     
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class PlayerAttack : MonoBehaviour
         {
 
             enemy.GetComponent<Enemy>().Damage(attackDamage);
+            playAudio();
 
 
         }
@@ -51,6 +53,11 @@ public class PlayerAttack : MonoBehaviour
             // this draws a sphere on the editor which makes it easiser for me to visulaise how the player attacks the enemy
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
 
+    }
+
+    public void playAudio()
+    {
+        sword.Play();
     }
 }
 

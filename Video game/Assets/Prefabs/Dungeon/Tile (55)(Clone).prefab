@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4526599646528234254}
   - component: {fileID: 5077263360941426546}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tile (55)(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

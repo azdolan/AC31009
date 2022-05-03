@@ -4,31 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+/// <summary>
+/// Class to display on screen value of player health
+/// </summary>
 public class Health : MonoBehaviour
 {
-    public Slider slider;
+    
+    public Text healthText;
+    public static int currentHealth;
+    
 
-
-    /*
-     * This function will set the max health 
-     */
-
-    public void maxHealth(int health)
+    void Start()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        currentHealth = 100;
+        healthText = GetComponent<Text>();
+
+        healthText.text = "Health: " + currentHealth;
     }
-
-
-    /*
-     * this function sets the health on the slider 
-     */
-
-    public void playerHealth(int health)
+    
+    void Update()
     {
-        slider.value = health;
-    }
 
+        healthText.text = "Health: " + currentHealth;
+    }
 
 }
 

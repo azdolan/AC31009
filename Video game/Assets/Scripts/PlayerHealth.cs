@@ -1,28 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class PlayerHealth : MonoBehaviour
 {
     public Animator animator;
     public int maxHealth = 100;
-    public int currenthealth = 50;
+    public int currenthealth;
+    public bool isAlive;
+    public EndGameScreen endGameScreen;
 
-    public Health health;
-
+    // creating globally accessible attribute so we can access it
+    // from other scripts 
+    public static event Action OnPlayerDeath;
 
     void Start()
     {
         currenthealth = maxHealth;
-        health.maxHealth(maxHealth);
+        isAlive = true;
+        //health.maxHealth(maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (currenthealth <= 0 && isAlive)
         {
-            playerDamage(20);
+            endGameScreen.EnableGameOverMenu();
+            playerDie();
+            Debug.Log("Player has died");
         }
     }
 
@@ -30,22 +38,24 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player died");
         animator.SetBool("isDead", true);
+        isAlive = false;
+
+        // Invoke game over
+        OnPlayerDeath?.Invoke();
+        
     }
 
     public void playerDamage(int damage)
     {
         currenthealth -= damage;
-        health.playerHealth(currenthealth);
-
-        if (currenthealth <= 0)
-        {
-            playerDie();
-        }
+        Health.currentHealth -=damage;
+        Debug.Log("Health: " + currenthealth);
     }
 
     public void increaseHealth(int increase)
     {
         currenthealth += increase;
+        Health.currentHealth += increase;
 
         if (currenthealth > maxHealth)
         {

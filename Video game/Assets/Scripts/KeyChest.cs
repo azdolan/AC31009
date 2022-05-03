@@ -7,9 +7,8 @@ public class KeyChest : MonoBehaviour
     public Animator animator;
     public Transform chestPoint;
     public float chestRange;
-    public LayerMask keychestLayer;
+    public LayerMask keyChestLayer;
     public GameObject keyChest;
-    PlayerHealth health;
     public AudioSource chestOpening;
 
 
@@ -18,7 +17,7 @@ public class KeyChest : MonoBehaviour
      */
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             chestTrigger();
         }
@@ -29,14 +28,15 @@ public class KeyChest : MonoBehaviour
      */
     public void chestTrigger()
     {
-        Collider2D[] chests = Physics2D.OverlapCircleAll(chestPoint.position, chestRange, keychestLayer);
+        Collider2D[] chests = Physics2D.OverlapCircleAll(chestPoint.position, chestRange, keyChestLayer);
         Debug.Log("Number of chests in range" + chests.Length);
 
         foreach (Collider2D chest in chests) // this loops for every item stored in the enemiesHit array
         {
             animator.SetTrigger("OpenChest"); //plays the chest opening animation
             keyChest = GameObject.Find("Player");
-            keyChest.GetComponent<Inventory>().keyFound(1);
+            //keyChest.GetComponent<Inventory>().keyFound(1);
+            Inventory.keyCount += 1;
             playAudio();
 
         }

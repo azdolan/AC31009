@@ -8,17 +8,22 @@ public class EnemyAttack : MonoBehaviour
     public Transform attackPoint;
     public float attackRange;
     public LayerMask playerLayer;
-    public int attackDamage = 2;
+    public int attackDamage = 1;
+    Enemy health;
+    
 
-    public float attackFrequency = 2f;
+    public float attackFrequency = 0.01f;
     float attackTime = 0f;
 
 
 
     void Update()
     {
-        if(Time.time >= attackTime)
+        health = this.GetComponent<Enemy>();
+
+        if(Time.time >= attackTime && health.GetEnemyHealth() >0)
         {
+
             Attack();
             attackTime = Time.time + 1f / attackFrequency;
 
@@ -35,7 +40,9 @@ public class EnemyAttack : MonoBehaviour
 
         foreach (Collider2D player in playerHit)
         {
+
             player.GetComponent<PlayerHealth>().playerDamage(attackDamage);
+            
         }
 
     }

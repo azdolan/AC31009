@@ -8,7 +8,7 @@ public class Camera : MonoBehaviour
     public Vector3 behindPlayer; // this will create an offset and move the camera behind the player 
 
 
-    void FixedUpdate()
+    void Update()
     {
         transform.position = player.position + behindPlayer;
     }

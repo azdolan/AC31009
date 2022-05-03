@@ -5,18 +5,34 @@ using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
-    public int player;
-    Text score;
+    public static int score = 0;
+    public Text scoreText;
+    public GameObject player;
 
     // Start is called before the first frame update
-   public void Start()
+    void Start()
     {
-        score = GetComponent<Text>();
+        scoreText = GetComponent<Text>();
+        Debug.Log("Text: " + scoreText.text);
+
+        scoreText.text = "Score: " + score;
+
     }
 
-    // Update is called once per frame
-    public void Update()
+    
+    public void increasePlayerScore(int value)
     {
-        score.text = "Score " + player;
+        score += value;
+        Debug.Log("Increased score to " + score);
+        
+        
+    }
+
+    void Update()
+    {
+        // Debug.Log("Player Score: " + score);
+
+        // scoreText = GetComponent<Text>();
+        //scoreText.text = "Score: " + score; 
     }
 }
